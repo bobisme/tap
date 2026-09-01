@@ -1,28 +1,23 @@
 class Sigil < Formula
   desc "Autonomous evaluation and merge policy engine for agent-generated PRs"
   homepage "https://runsigil.com"
-  version "0.33.0"
+  version "0.33.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/bobisme/sigil-releases/releases/download/v0.33.0/sigil-aarch64-apple-darwin.tar.xz"
-      sha256 "24e144f4f86578bde6b117e0e8e3e3852908e19f9c902c1814f1a3b193a367fc"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/bobisme/sigil-releases/releases/download/v0.33.0/sigil-x86_64-apple-darwin.tar.xz"
-      sha256 "8e4284b2139d47c241d5df78ca4a34503d4cc2800aad7bb707c4afe531b3afd4"
+      url "https://github.com/bobisme/sigil-releases/releases/download/v0.33.1/sigil-aarch64-apple-darwin.tar.xz"
+      sha256 "3cbc2563069f18b117151e74559bbffd7c54c77e33df72087a75a549e1340905"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/bobisme/sigil-releases/releases/download/v0.33.0/sigil-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e0b2392d091e87bc4c136394e505d406c17cb4972c486f502580e223167d7712"
+      url "https://github.com/bobisme/sigil-releases/releases/download/v0.33.1/sigil-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e2a8370a835823d3c741b1e58af4fa4fc9d39446af921725c033f98b5775cab6"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
-    "x86_64-apple-darwin": {},
     "x86_64-unknown-linux-gnu": {}
   }
 
@@ -43,9 +38,6 @@ class Sigil < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "sigil"
-    end
-    if OS.mac? && Hardware::CPU.intel?
       bin.install "sigil"
     end
     if OS.linux? && Hardware::CPU.intel?

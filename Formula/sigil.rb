@@ -1,14 +1,14 @@
 class Sigil < Formula
   desc "Autonomous evaluation and merge policy engine for agent-generated PRs"
   homepage "https://runsigil.com"
-  version "0.33.2"
+  version "0.34.0"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/bobisme/sigil-releases/releases/download/v0.33.2/sigil-aarch64-apple-darwin.tar.xz"
-    sha256 "5a914859072f76d29bce761e9ed8be1dea7ab39183037ede2f3608a4e6d4467a"
+    url "https://github.com/bobisme/sigil-releases/releases/download/v0.34.0/sigil-aarch64-apple-darwin.tar.xz"
+    sha256 "bc62acf0b86a2337d97a87e5e22a6ca56710548f26ae82f7750cc5fb0255999a"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/bobisme/sigil-releases/releases/download/v0.33.2/sigil-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "0273d33de1c5299d3a906891bad09601980ff95fb8a8228895e3a1d4f7f9fe6c"
+    url "https://github.com/bobisme/sigil-releases/releases/download/v0.34.0/sigil-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "2c718525a7c63f6f58cd61cd88335716ca42917ee8605a616c830b45996098bb"
   end
   license "MIT"
 
